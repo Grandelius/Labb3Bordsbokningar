@@ -1,0 +1,62 @@
+﻿<Window x:Class="Labb3Bordsbokningar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labb3Bordsbokningar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFAB9999">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.54" />
+            <ColumnDefinition Width="17.46"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Label x:Name="Label" Grid.Column="2" Grid.Row="1" FontSize="30" Content="Gröndal Stekhouse" Margin="250,0,0,0" FontWeight="Bold" FontFamily="Impact"/>
+        <Label Grid.Column="2" Grid.Row="3" Margin="0,0,0,0" FontSize="20" Content="Boka här:"></Label>
+        <Label Grid.Column="2" Grid.Row="4" Content="Datum" FontSize="15"></Label>
+        <Label Grid.Column="2" Grid.Row="4" Content="Namn" FontSize="15" Margin="150,0,0,0"></Label>
+        <DatePicker x:Name="datePicker" Grid.Column="2" Grid.Row="4" FontSize="10" Margin="0,29,411,0" Grid.RowSpan="2"></DatePicker>
+        <TextBox x:Name="tbxName" Grid.Column="2" Grid.Row="4" Margin="155,29,250,30" Grid.RowSpan="3"></TextBox>
+        <Label Grid.Column="2" Grid.Row="6" Content="Tid" FontSize="15"></Label>
+        <ComboBox x:Name="cbxTime" Grid.Column="2" Grid.Row="7" Text="Välj tid" Margin="0,0,400,0">
+            <GroupItem>17.00</GroupItem>
+            <GroupItem>19.00</GroupItem>
+            <GroupItem>21.00</GroupItem>
+        </ComboBox>
+        <Label Grid.Column="2" Grid.Row="6" Content="Bord nr" FontSize="15" Margin="150,0,0,0"></Label>
+        <ComboBox x:Name="cbxTable" Grid.Column="2" Grid.Row="7" Text="Välj bord" Margin="155,0,250,0">
+            <GroupItem>1</GroupItem>
+            <GroupItem>2</GroupItem>
+            <GroupItem>3</GroupItem>
+            <GroupItem>4</GroupItem>
+            <GroupItem>5</GroupItem>
+            <GroupItem>6</GroupItem>
+            <GroupItem>7</GroupItem>
+        </ComboBox>
+        <Button x:Name="btnBoka" Content="Boka" Grid.Column="2" Grid.Row="8" Margin="0,30,400,0" Click="BtnBook"></Button>
+        <Label Grid.Column="3" Grid.Row="3" Content="Bokningar" FontSize="20" Margin="-150,0,0,0"></Label>
+        <ListBox x:Name="lbxBokningar" Grid.Column="3" Grid.Row="4" Background="#FFD1D0AC" Margin="-150,0,-100,-250" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxHeight="300"></ListBox>
+        <Button x:Name="btnVisaBokningar" Grid.Column="2" Grid.Row="9" Content="Visa bokningar" Margin="200,0,200,-40" Click="BtnShowBookings"></Button>
+        <Button x:Name="btnAvboka" Grid.Column="2" Grid.Row="10" Content="Avboka" Margin="200,50,200,-80" Click="BtnCancelBooking"> </Button>
+
+    </Grid>
+</Window>
